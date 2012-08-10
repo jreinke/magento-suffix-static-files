@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <JR_SuffixJsCss>
+            <version>0.1.0</version>
+        </JR_SuffixJsCss>
+    </modules>
+    <global>
+        <blocks>
+            <page>
+                <rewrite>
+                    <html_head>JR_SuffixJsCss_Block_Page_Html_Head</html_head>
+                </rewrite>
+            </page>
+        </blocks>
+    </global>
+    <default>
+        <dev>
+            <suffix_js_css>
+                <enable>1</enable>
+                <suffix>123456</suffix>
+            </suffix_js_css>
+        </dev>
+    </default>
+</config>
