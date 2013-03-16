@@ -18,6 +18,7 @@
         <dev>
             <suffix_js_css>
                 <enable>1</enable>
+                <auto>1</auto>
                 <suffix>123456</suffix>
             </suffix_js_css>
         </dev>
