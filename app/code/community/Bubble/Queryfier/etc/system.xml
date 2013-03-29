@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
+    <tabs>
+        <bubble translate="label">
+            <label>Bubble Code</label>
+            <sort_order>1000</sort_order>
+        </bubble>
+    </tabs>
     <sections>
-        <dev>
+        <bubble_queryfier module="bubble_queryfier">
+            <label>Bubble Queryfier</label>
+            <tab>bubble</tab>
+            <sort_order>20</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
             <groups>
-                <suffix_js_css>
+                <hint>
+                    <frontend_model>bubble_queryfier/adminhtml_system_config_fieldset_hint</frontend_model>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </hint>
+                <suffix_js_css translate="label comment">
                     <label>Suffix JS/CSS Settings</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>300</sort_order>
@@ -11,7 +30,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <enable translate="label">
+                        <enable translate="label comment">
                             <label>Enable</label>
                             <comment>Add a query parameter to js and css files?</comment>
                             <frontend_type>select</frontend_type>
@@ -21,7 +40,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </enable>
-                        <auto translate="label">
+                        <auto translate="label comment">
                             <label>Auto Generate Suffix</label>
                             <comment><![CDATA[Will automatically add query parameter based on last modification date.]]></comment>
                             <frontend_type>select</frontend_type>
@@ -34,9 +53,9 @@
                                 <enable>1</enable>
                             </depends>
                         </auto>
-                        <suffix translate="label">
+                        <suffix translate="label comment">
                             <label>Suffix</label>
-                            <comment><![CDATA[Will be added like this: ?q=suffix (just specify the suffix, it will be encoded via urlencode). For example: 20120810]]></comment>
+                            <comment><![CDATA[Will be added like this: <span style="white-space:nowrap;">?q=suffix</span> (just specify the suffix, it will be encoded via urlencode). For example: 20120810]]></comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>30</sort_order>
                             <show_in_default>1</show_in_default>
@@ -50,6 +69,6 @@
                     </fields>
                 </suffix_js_css>
             </groups>
-        </dev>
+        </bubble_queryfier>
     </sections>
 </config>
