@@ -5,7 +5,7 @@ This is especially useful to force browser reloading files and to update your we
 
 ## Installation
 
-### Magento CE 1.6.x, 1.7.x
+### Magento CE 1.6.x, 1.7.x, 1.8.x
 
 Install with [modgit](https://github.com/jreinke/modgit):
 
@@ -18,9 +18,10 @@ or download package manually:
 * Download latest version [here](https://github.com/jreinke/magento-suffix-static-files/archive/master.zip)
 * Unzip in Magento root folder
 * Clear cache
+* Logout from admin then login again to access module configuration
 
 ## How to use
 
-Simply specify a query parameter in "System > Configuration > Bubble Queryfier > Suffix JS/CSS Settings".
+Simply enable automatic generation or define a query parameter in "System > Configuration > Bubble Queryfier > Suffix JS/CSS Settings".
 
 Full overview available [here](http://www.bubblecode.net/en/2012/08/28/magento-a-module-to-force-static-files-reloading/).

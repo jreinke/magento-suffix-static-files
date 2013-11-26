@@ -65,9 +65,11 @@ class Bubble_Queryfier_Block_Page_Html_Head extends Mage_Page_Block_Html_Head
 
     protected function _getFileModificationTimeFromUrl($url)
     {
-        $file = Mage::getBaseDir() . parse_url($url, PHP_URL_PATH);
+        $baseUrl = preg_replace('#https?://#', '', Mage::getBaseUrl());
+        $url = preg_replace('#https?://#', '', $url);
+        $file = Mage::getBaseDir() . DS . trim(str_replace($baseUrl, '', $url), DS);
 
-        return filemtime($file);
+        return file_exists($file) ? filemtime($file) : $this->getUrlSuffix();
     }
 
     public function isUrlSuffixEnabled()
