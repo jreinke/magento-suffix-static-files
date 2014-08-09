@@ -1,0 +1,5 @@
+app/code/community/Bubble/Queryfier/ app/code/community/Bubble/Queryfier/
+app/design/adminhtml/base/default/template/bubble/queryfier/ app/design/adminhtml/base/default/template/bubble/queryfier/
+app/etc/modules/Bubble_Queryfier.xml app/etc/modules/Bubble_Queryfier.xml
+app/locale/fr_FR/Bubble_Queryfier.csv app/locale/fr_FR/Bubble_Queryfier.csv
+
