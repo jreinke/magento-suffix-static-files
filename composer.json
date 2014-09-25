@@ -1,0 +1,30 @@
+{
+    "name":"jreinke/magento-suffix-static-files",
+    "type":"magento-module",
+    "license":"OSL-3.0",
+    "homepage":"https://github.com/jreinke/magento-suffix-static-files",
+    "description":"Add a query parameter to static files (js and css). This is especially useful to force browser reloading files and to update your website design.",
+    "require":{
+        "magento-hackathon/magento-composer-installer":"*"
+    },
+    "extra":{
+        "map":[
+          [
+            "app/etc/modules/Bubble_Queryfier.xml",
+            "app/etc/modules/Bubble_Queryfier.xml"
+          ],
+          [
+            "app/code/community/Bubble/Queryfier",
+            "app/code/community/Bubble/Queryfier"
+          ],
+          [
+            "app/design/adminhtml/base/default/template/bubble/queryfier",
+            "app/design/adminhtml/base/default/template/bubble/queryfier"
+          ],
+          [
+            "app/locale/fr_FR/Bubble_Queryfier.csv",
+            "app/locale/fr_FR/Bubble_Queryfier.csv"
+          ],
+        ]
+    }
+}
