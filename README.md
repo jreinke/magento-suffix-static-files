@@ -1,11 +1,11 @@
 ## Overview
 
-This extension allows you to add a query parameter to static files (js and css).
+This extension allows you to add a query parameter to static files (JS and CSS).
 This is especially useful to force browser reloading files and to update your website design.
 
 ## Installation
 
-### Magento CE 1.6.x, 1.7.x, 1.8.x
+### Magento CE 1.6.x, 1.7.x, 1.8.x, 1.9.x
 
 Install with [modgit](https://github.com/jreinke/modgit):
 
@@ -22,6 +22,6 @@ or download package manually:
 
 ## How to use
 
-Simply enable automatic generation or define a query parameter in "System > Configuration > Bubble Queryfier > Suffix JS/CSS Settings".
+Simply enable automatic generation or define a query parameter in "System > Configuration > Queryfier > Suffix JS/CSS Settings".
 
 Full overview available [here](http://www.bubblecode.net/en/2012/08/28/magento-a-module-to-force-static-files-reloading/).

@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * @category    Bubble
+ * @package     Bubble_Queryfier
+ * @version     1.0.0
+ * @copyright   Copyright (c) 2014 BubbleShop (https://www.bubbleshop.net)
+ */
 class Bubble_Queryfier_Block_Page_Html_Head extends Mage_Page_Block_Html_Head
 {
     protected function &_prepareStaticAndSkinElements($format, array $staticItems, array $skinItems, $mergeCallback = null)
