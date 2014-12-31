@@ -70,9 +70,23 @@ class Bubble_Queryfier_Block_Page_Html_Head extends Mage_Page_Block_Html_Head
 
     protected function _getFileModificationTimeFromUrl($url)
     {
-        $baseUrl = preg_replace('#https?://#', '', Mage::getBaseUrl());
-        $url = preg_replace('#https?://#', '', $url);
-        $file = Mage::getBaseDir() . DS . trim(str_replace($baseUrl, '', $url), DS);
+        $base_dir = Mage::getBaseDir();
+        $base_url = Mage::getBaseUrl();
+
+        if (strpos($url, Mage::getBaseUrl()) === 0) {
+            # pass
+        } else if (strpos($url, Mage::getBaseUrl('media')) === 0) {
+            $base_dir = Mage::getBaseDir('media');
+            $base_url = Mage::getBaseUrl('media');
+        } else if (strpos($url, Mage::getBaseUrl('skin')) === 0) {
+            $base_dir = Mage::getBaseDir('skin');
+            $base_url = Mage::getBaseUrl('skin');
+        } else if (strpos($url, Mage::getBaseUrl('js')) === 0) {
+            $base_dir = Mage::getBaseDir() . DS . 'js';
+            $base_url = Mage::getBaseUrl('js');
+        }
+
+        $file = $base_dir . DS . trim(str_replace($base_url, '', $url), DS);
 
         return file_exists($file) ? filemtime($file) : $this->getUrlSuffix();
     }
